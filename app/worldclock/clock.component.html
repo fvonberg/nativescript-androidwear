@@ -2,7 +2,7 @@
     <FlexboxLayout flexDirection="row" justifyContent="center" (tap)="nextTimeZone()">
         <Label text="&#xf077;" class="fa"></Label>
     </FlexboxLayout>
-    <FlexboxLayout flexDirection="column">
+    <FlexboxLayout flexDirection="column" #timeContainer>
         <FlexboxLayout flexDirection="row" justifyContent="center">
             <Label [text]="(clockModel$ | async)?.city" class="h3"></Label>
         </FlexboxLayout>
