@@ -1,0 +1,19 @@
+<FlexboxLayout flexDirection="column" justifyContent="space-between" (swipe)="onSwipe($event)">
+    <FlexboxLayout flexDirection="row" justifyContent="center" (tap)="nextTimeZone()">
+        <Label text="&#xf077;" class="fa"></Label>
+    </FlexboxLayout>
+    <FlexboxLayout flexDirection="column">
+        <FlexboxLayout flexDirection="row" justifyContent="center">
+            <Label [text]="(clockModel$ | async)?.city" class="h3"></Label>
+        </FlexboxLayout>
+        <FlexboxLayout flexDirection="row" justifyContent="center">
+            <Label [text]="(clockModel$ | async)?.dateTime | date:'HH'" class="h1 time"></Label>
+            <Label text=":" class="h1 time"></Label>
+            <Label [text]="(clockModel$ | async)?.dateTime | date:'mm'" class="h1 time"></Label>
+            <Label [text]="(clockModel$ | async)?.dateTime | date:'ss'"></Label>
+        </FlexboxLayout>
+    </FlexboxLayout>
+    <FlexboxLayout flexDirection="row" justifyContent="center">
+        <Label text="&#xf078;" class="fa" (tap)="prevTimeZone()"></Label>
+    </FlexboxLayout>
+</FlexboxLayout>
