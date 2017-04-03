@@ -1,6 +1,6 @@
 <FlexboxLayout flexDirection="column" justifyContent="space-between" (swipe)="onSwipe($event)">
     <FlexboxLayout flexDirection="row" justifyContent="center" (tap)="nextTimeZone()">
-        <Label text="&#xf077;" class="fa"></Label>
+        <Label text="&#xf106;" class="fa m-t-5 arrow"></Label>
     </FlexboxLayout>
     <FlexboxLayout flexDirection="column" #timeContainer>
         <FlexboxLayout flexDirection="row" justifyContent="center">
@@ -14,6 +14,6 @@
         </FlexboxLayout>
     </FlexboxLayout>
     <FlexboxLayout flexDirection="row" justifyContent="center">
-        <Label text="&#xf078;" class="fa" (tap)="prevTimeZone()"></Label>
+        <Label text="&#xf107;" class="fa m-b-5 arrow" (tap)="prevTimeZone()"></Label>
     </FlexboxLayout>
 </FlexboxLayout>
